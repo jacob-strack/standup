@@ -1,0 +1,20 @@
+# .bashrc
+export PATH=/usr/lib64/openmpi/bin:/home/jstrack/yt-conda/bin:/home/jstrack/scripts:$PATH
+export LD_LIBRARY_PATH=/usr/lib64:/usr/lib64/openmpi/lib:/home/jstrack/yt-conda/lib:/home/jstrack/enzo/grackle/src/clib/lib:$LD_LIBRARY_PATH
+export PYTHONPATH=/home/jstrack/scripts/galaxy-analysis/:/home/jstrack/repositories/p19_newscripts/tools_data/:$PYTHONPATH
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
